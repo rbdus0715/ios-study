@@ -1,2 +1,17 @@
-## Study Notes 
-[notion link](https://hazel-anorak-25a.notion.site/IOS-2615f59b17778045ad07c9dc9b1514b4?source=copy_link)
+## 📱 IOS 10일 스터디 챌린지
+- 교재: 스위프트로 아이폰 앱 만들기 (입문)
+- 스터디 노트: [notion link](https://hazel-anorak-25a.notion.site/IOS-2615f59b17778045ad07c9dc9b1514b4?source=copy_link)
+
+## 📚 커리큘럼
+||index|
+|---|---|
+|1|hello world / 이미지뷰|
+|2|데이트 피커, 피커 뷰, 경고창|
+|3|웹 뷰, 맵 뷰, 페이지 컨트롤|
+|4|탭 바 컨트롤러, 내비게이션 컨트롤러|
+|5|테이블 뷰 컨트롤러, 자동 레이아웃|
+|6|오디오 재생 앱, 비디오 재생 앱|
+|7|카메라, 포토 라이브러리, 그림 그리기|
+|8|탭과 터치|
+|9|스와이프 제스처|
+|10|핀치 제스처|
