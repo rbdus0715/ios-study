@@ -18,3 +18,7 @@
 9. swipe
 10. pinch gesture
 
+## Studying
+<img width="640" height="480" alt="_" src="https://github.com/user-attachments/assets/7e395114-11a2-4bb8-b7ad-e329d282b2b9" />
+
+
