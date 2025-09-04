@@ -1,17 +1,20 @@
-## 📱 IOS 10일 스터디 챌린지
-- 교재: 스위프트로 아이폰 앱 만들기 (입문)
-- 스터디 노트: [notion link](https://hazel-anorak-25a.notion.site/IOS-2615f59b17778045ad07c9dc9b1514b4?source=copy_link)
+# IOS 10days Study Challenge
+이 레포지토리는 IOS 개발 스터디 기록용입니다.
+교재는 아래의 책을 기반으로 하며 Swift 기반 지식을 쌓기 전, 빠르게 IOS에 대한 감을 잡기 위한 코스입니다.
+10일 과정에 맞춰서 한 번에 끝낼 수 있길 기원합니다 🙏
+[Study Note 링크](https://hazel-anorak-25a.notion.site/IOS-2615f59b17778045ad07c9dc9b1514b4?source=copy_link)
+<br>
+<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791187370772.jpg" width="300">
 
-## 📚 커리큘럼
-||index|
-|---|---|
-|1|hello world / 이미지뷰|
-|2|데이트 피커, 피커 뷰, 경고창|
-|3|웹 뷰, 맵 뷰, 페이지 컨트롤|
-|4|탭 바 컨트롤러, 내비게이션 컨트롤러|
-|5|테이블 뷰 컨트롤러, 자동 레이아웃|
-|6|오디오 재생 앱, 비디오 재생 앱|
-|7|카메라, 포토 라이브러리, 그림 그리기|
-|8|탭과 터치|
-|9|스와이프 제스처|
-|10|핀치 제스처|
+## Curriculum
+1. hello world / image view
+2. date picker, picker view, alert
+3. web view, map view, page Control
+4. tab bar controller, navigation controller
+5. table view controller, auto layout
+6. audio/video play application
+7. camera, photo library, drawing
+8. tab and touch
+9. swipe
+10. pinch gesture
+
