@@ -59,6 +59,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.labelLocationInfo1.text = "현재 위치"
             self.labelLocationInfo2.text = address
         })
+        
+        locationManager.stopUpdatingLocation()
     }
 }
 
