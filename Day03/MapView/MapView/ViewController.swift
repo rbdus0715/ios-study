@@ -26,15 +26,46 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()                   // 위치 업데이트 시작
         myMap.showsUserLocation = true
     }
+    
 
-    @IBAction func sgmentChangeLocation(_ sender: Any) {
+    @IBAction func sgmentChangeLocation(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            // 현재 위치
+            self.labelLocationInfo1.text = ""
+            self.labelLocationInfo2.text = ""
+            // 계속 업데이트
+            locationManager.startUpdatingLocation()
+        } else if sender.selectedSegmentIndex == 1 {
+            setAnnotation(
+                latitudeValue: 37.481632,
+                longitudeValue: 126.997620,
+                delta: 1,
+                title: "방배역", subtitle: "서울특별시 서초구 방배역"
+            )
+            self.labelLocationInfo1.text = "보고 계신 위치"
+            self.labelLocationInfo2.text = "방배역"
+        } else if sender.selectedSegmentIndex == 2 {
+            setAnnotation(latitudeValue: 37.556876, longitudeValue: 126.914066, delta: 0.1, title: "이지스퍼블리싱", subtitle: "서울시 마포구 잔다리로 109 이지스 빌딩")
+            self.labelLocationInfo1.text = "보고 계신 위치"
+            self.labelLocationInfo2.text = "이지스퍼블리싱 출판사"
+        }
     }
     
-    func goLocation(latitudeValue: CLLocationDegrees, longitudeValue: CLLocationDegrees, delta span: Double) {
+    func goLocation(latitudeValue: CLLocationDegrees, longitudeValue: CLLocationDegrees, delta span: Double)-> CLLocationCoordinate2D {
         let pLocation = CLLocationCoordinate2DMake(latitudeValue, longitudeValue)
         let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span)
         let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue)
         myMap.setRegion(pRegion, animated: true)
+        return pLocation
+    }
+    
+    func setAnnotation(latitudeValue: CLLocationDegrees, longitudeValue: CLLocationDegrees, delta span: Double, title strTitle: String, subtitle strSubtitle: String) {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = goLocation(latitudeValue: latitudeValue, longitudeValue: longitudeValue, delta: span)
+        // 핀의 타이틀과 서브타이틀을 입력 파라미터를 통해 세팅, 맵 뷰에 변수 annotation 값 추가
+        annotation.title = strTitle
+        annotation.subtitle = strSubtitle
+        myMap.addAnnotation(annotation)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
